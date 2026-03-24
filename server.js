@@ -15,7 +15,34 @@ app.get("/", (req, res) => {
 // Generate route
 app.post("/generate", async (req, res) => {
   try {
-    const prompt = req.body.prompt;
+    const input = req.body.prompt;
+
+const prompt = `You are a top viral content creator.
+
+Create 10 EXTREMELY VIRAL, high-quality Instagram captions for "${input}".
+
+Style:
+- Gen Z + influencer + luxury vibe 😎
+- Bold, confident, addictive
+- Emotion + attitude + storytelling
+- Make it feel like trending reels
+
+Rules:
+- Strong hook in first line (attention grabbing)
+- Use powerful words + psychology triggers
+- Add emojis smartly 🔥✨💯🚀
+- Keep captions short but impactful
+- Mix styles: savage, emotional, romantic, funny, deep
+
+Extra:
+- 2 captions with questions
+- 2 savage/attitude captions
+- 2 emotional/deep captions
+- 1 luxury/premium vibe caption
+
+Make every caption feel ORIGINAL, not basic.
+
+Only output captions, no numbering, no explanation.`;
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
