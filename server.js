@@ -17,6 +17,32 @@ app.post("/generate", async (req, res) => {
   try {
     const input = req.body.prompt;
 
+const prompt = `You are an elite viral content creator and social media expert.
+
+Generate 10 UNIQUE, HIGHLY VIRAL Instagram captions for "${input}".
+
+Style:
+- Gen Z + influencer vibe 😎
+- Bold, catchy, addictive
+- Strong hook in first line
+- Use emojis 🔥✨💯🚀
+
+Mix:
+- 2 savage 😈
+- 2 emotional 💔
+- 2 funny 😂
+- 2 relatable 🤝
+- 2 premium ✨
+
+Rules:
+- No repetition
+- Short & punchy
+- Each caption must feel original
+
+Then generate 12 viral hashtags for "${input}"
+
+Only captions + hashtags, no explanation.`;
+
 const prompt = `You are a top viral content creator.
 
 Create 10 EXTREMELY VIRAL, high-quality Instagram captions for "${input}".
